@@ -1,0 +1,42 @@
+{"Data":
+    [
+        {
+            "title":"BUY of $34.oM USD of LOPR on 1/29/15",
+            "status":"escalated",
+            "trader":"Prasanta Shivakrishnan",
+            "counterparty":"Guerra Corporation",
+            "book":"PRHI-Z53",
+            "source":"Bank Trading" 
+        },
+        {
+            "title":"SELL of $836K GBP/AUD of GBP/AUD on 1/30/15",
+            "status":"open",
+            "trader":"Hugo Justice",
+            "counterparty":"VSJP-AG1K",
+            "book":"HUUS-K31",
+            "source":"Bank Trading"
+        },
+        {
+            "title":"BUY of $2.00M GBO/USD with ERCD International on 1/30/15",
+            "status":"closed",
+            "trader":"Neville Ruben",
+            "counterparty":"ERCD International",
+            "book":"NEUB-B31",
+            "source":"Bank Trading"
+        },
+        {
+            "title":"SELL of $5.00M USD/CHF with Brown Banking on 1/30/15",
+            "status":"closed",
+            "trader":"Bradon Grover",
+            "counterparty":"Brown Banking",
+            "book":"DLEF-A81",
+            "source":"Bank Tradin"
+        }
+    
+    ]
+}
+
+  
+ 
+
+

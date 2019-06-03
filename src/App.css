@@ -1,0 +1,68 @@
+.App{
+
+}
+.sidebar{
+    color: white;
+    height: 100%;
+    max-width: 250px; 
+    float: left;
+    background-color: rgb(48,64,77);
+    align-items: stretch;
+}
+.container{
+    color:#889aa6;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.flex-item-1 {
+	flex: 1;
+}
+.float-left {
+    float: left;
+}
+.relative {
+    position: relative;
+
+}
+/**/
+
+.Display{
+    
+}
+.DisplayHeader{
+    
+}
+
+.SearchInput{
+    float: left;
+}
+.ButtonGroup{
+    margin-left: 10px;
+    position: relative;
+}
+.Sets{
+    float: left;
+}
+.SetsContainer{
+    padding-top: 9px;
+    color: white;
+    background-color: rgb(57,75,89);
+}
+.SetsTitle{
+    text-align: center;
+    position: relative;
+}
+.Tree{
+    color: white;
+    background-color:#394B58; 
+}
+.FilterTableSearch{
+    background-color: #212b34;
+}
