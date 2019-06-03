@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import {DisplayHeader} from './DisplayHeader';
-import {DisplayTable} from './DisplayTable';
+import DisplayTable from './DisplayTable';
 
 export class Display extends Component {
     
