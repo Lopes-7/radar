@@ -6,14 +6,17 @@ import { IconNames } from "@blueprintjs/icons";
 export class SidebarHeader extends Component{
     render() { 
         return ( 
-        <div className={Classes.DARK}>
+        <div >
             <Navbar>
-                <NavbarGroup>
-                    <Icon icon={IconNames.CIRCLE} />
-                    <NavbarHeading>RADAR</NavbarHeading>
-                    <Icon icon={IconNames.USER} />
-                    <Icon icon={IconNames.NOTIFICATIONS} />
-                    <Icon icon={IconNames.HELP} />
+                <NavbarGroup className="container grid grid-template-columns-3">
+                    <Icon  icon={IconNames.CIRCLE} />
+                    <NavbarHeading >RADAR</NavbarHeading>
+                    <div >
+                        <Icon icon={IconNames.USER} />
+                        <Icon icon={IconNames.NOTIFICATIONS} />
+                        <Icon icon={IconNames.HELP} />
+                    </div>
+                    
                 </NavbarGroup>
             </Navbar> 
             <div className="SetsContainer">    

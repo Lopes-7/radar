@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
-import {connect} from "react-redux";
+import { connect } from "react-redux";
 
 import { InputGroup } from "@blueprintjs/core";
 import { IconNames } from "@blueprintjs/icons";

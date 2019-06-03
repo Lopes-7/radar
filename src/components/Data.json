@@ -1,6 +1,7 @@
 [
         {
-            "title":"BUY of $34.oM USD of LOPR on 1/29/15",
+            "title":"BUY of $34.0M USD of LOPR on 1/29/15",
+            "color":"red",
             "status":"Escalated",
             "trader":"Prasanta Shivakrishnan",
             "counterparty":"Guerra Corporation",
@@ -9,6 +10,7 @@
         },
         {
             "title":"SELL of $836K GBP/AUD of GBP/AUD on 1/30/15",
+            "color":"orange",
             "status":"Open",
             "trader":"Hugo Justice",
             "counterparty":"VSJP-AG1K",
@@ -17,6 +19,7 @@
         },
         {
             "title":"BUY of $2.00M GBO/USD with ERCD International on 1/30/15",
+            "color":"orange",
             "status":"Closed",
             "trader":"Neville Ruben",
             "counterparty":"ERCD International",
@@ -25,13 +28,22 @@
         },
         {
             "title":"SELL of $5.00M USD/CHF with Brown Banking on 1/30/15",
+            "color":"orange",
             "status":"Closed",
             "trader":"Bradon Grover",
             "counterparty":"Brown Banking",
             "book":"DLEF-A81",
             "source":"Bank Tradin"
+        },
+        {
+            "title":"SELL of $1.39M EUR/USD with Guerra Corporation on 1/30/15",
+            "color":"grey",
+            "status":"Open",
+            "trader":"Prasanta Shivakrishnan",
+            "counterparty":"Guerra Corporation",
+            "book":"NMUJ-M81",
+            "source":"Bank Tradin"
         }
-    
     ]
 
 

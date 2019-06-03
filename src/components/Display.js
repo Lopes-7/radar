@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import {DisplayHeader} from './DisplayHeader';
+import DisplayHeader from './DisplayHeader';
 import DisplayTable from './DisplayTable';
 
 export class Display extends Component {
@@ -8,7 +8,7 @@ export class Display extends Component {
     render() {
         
         return (
-        <div className="Display relative">
+        <div className="display">
             <DisplayHeader />
             <DisplayTable />
         </div>);

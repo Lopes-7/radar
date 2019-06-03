@@ -8,10 +8,12 @@ export class DisplayTable extends Component {
 
 
     render() { 
+        //pegando estado da store
         const {openFilter, closedFilter, escalatedFilter} = this.props;
+        //selecionando dados que serão mostrados com base nos filtros ativados
         const selectedRows = [];
         data.map(datum => {
-            console.log(datum.status)
+                
             if (openFilter){
                 
                 if (datum.status === 'Open'){
@@ -28,6 +30,7 @@ export class DisplayTable extends Component {
                     selectedRows.push(datum);
                 }
             }
+            //se nenhum filtro estiver ativado todos dados devem ser mostrados
             if (!openFilter && !closedFilter && !escalatedFilter){
                 selectedRows.push(datum);
             }

@@ -1,11 +1,13 @@
 import { combineReducers } from 'redux';
 
-import { propertiesSearchReducer } from './propertiesSearchReducer';
+import { alertsSearchReducer } from './alertsSearchReducer';
 import { changeFilterReducer } from './changeFilterReducer';
+import { propertiesSearchReducer } from './propertiesSearchReducer';
 
-
+//combinando reducers
 export const Reducers = combineReducers({
-  propertieSearchState: propertiesSearchReducer,
-  filtersState: changeFilterReducer
-  //outros reducers entrarão aqui
+  alertsSearchState: alertsSearchReducer,
+  filtersState: changeFilterReducer,
+  propertieSearchState: propertiesSearchReducer
+  
 });

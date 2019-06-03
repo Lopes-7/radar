@@ -1,17 +1,24 @@
 import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from "react-redux";
 
 import { Button, ButtonGroup, InputGroup } from "@blueprintjs/core";
+
+import {changeAlertsSearch} from '../actions/actionCreators';
 
 export class DisplayHeader extends Component {
 
     render() { 
+        const {changeAlertsSearch, alertsSearchValue} = this.props;
+        console.log(alertsSearchValue);
         return ( 
             <div className="DisplayHeader">
                 <div className="SearchInput">
                     <InputGroup 
-                    className="bp3-round"
-                    leftIcon="search"
-                    placeholder="Search for Alerts"
+                        className="bp3-round"
+                        leftIcon="search"
+                        placeholder="Search for Alerts"
+                        onChange={(e)=>{changeAlertsSearch(e.target.value)}}
                     ></InputGroup>
                     
                 </div>
@@ -29,3 +36,12 @@ export class DisplayHeader extends Component {
         );
     }
 }
+
+const mapStateToProps = store => ({
+    alertsSearchValue: store.alertsSearchState.alertsSearchValue 
+})
+    
+const mapDispatchToProps = dispatch =>
+    bindActionCreators({ changeAlertsSearch }, dispatch);
+
+export default connect(mapStateToProps,mapDispatchToProps)(DisplayHeader); 
