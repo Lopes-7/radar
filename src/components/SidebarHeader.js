@@ -6,12 +6,12 @@ import { IconNames } from "@blueprintjs/icons";
 export class SidebarHeader extends Component{
     render() { 
         return ( 
-        <div >
-            <Navbar>
-                <NavbarGroup className="container grid grid-template-columns-3">
+        <div>
+            <Navbar className="radar">
+                <NavbarGroup>
                     <Icon  icon={IconNames.CIRCLE} />
                     <NavbarHeading >RADAR</NavbarHeading>
-                    <div >
+                    <div className="icons">
                         <Icon icon={IconNames.USER} />
                         <Icon icon={IconNames.NOTIFICATIONS} />
                         <Icon icon={IconNames.HELP} />
@@ -19,12 +19,12 @@ export class SidebarHeader extends Component{
                     
                 </NavbarGroup>
             </Navbar> 
-            <div className="SetsContainer">    
-                <div className="Sets">
+            <div className="open-flags">    
+                <div className="icons">
                     <Icon icon={IconNames.CHEVRON_LEFT} />
-                    Sets
+                    Sets 
                 </div>
-                <p className={"SetsTitle"}>OPEN FLAGS</p>
+                <p className="open-flags-title">OPEN FLAGS</p>
             </div>
         </div>
          );

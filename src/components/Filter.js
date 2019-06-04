@@ -25,7 +25,7 @@ export class Filter extends Component {
         }
         
         return (
-            <div>
+            <div className="filter">
             <Button icon={IconNames.SMALL_CROSS}
                     small={true}
                     intent={validFilter ? "success" : "none"}

@@ -2,23 +2,87 @@
 
 }
 
+/*SIDEBAR*/
 .sidebar{
     max-width: 250px;
+    background: rgb(48,64,77);
+    color: white   
+}
+
+/*Sidebar Header*/
+/*Radar Header*/
+.bp3-navbar.radar {
+    background: rgb(48,64,77);
+    color: white;
+}
+
+.bp3-navbar.radar .bp3-navbar-group.bp3-align-left .icons {
+    color: rgb(136,154,166);
+}
+
+/*Open Flags Header*/
+.open-flags {
+    align-items: center;
+    height: 50px;
+    display: flex;
+    background:  rgb(57,75,89);
+}
+
+.open-flags-title {
+    margin: 0;
+    margin-left: 41px;
+}
+/*Properties Search Input*/
+.bp3-input-group.bp3-large.properties .bp3-input{
+    background: rgb(33,43,52);
+    color: rgb(135,153,166);
+}
+
+/*FilterTable*/
+
+.filter-row {
+    display: flex;
+    background: rgb(57,75,89);
+    height: 50px;
+    box-shadow: black;
+    
+    
     
 }
 
-.display{
-    position: relative;
+.filter-row-icon{
+    margin-left: auto;
+    color:rgb(135,153,166);
 }
-.row {
-	flex-direction: row;
+.title {
+    float: left
 }
+
+.filter-expand {
+    display: grid;
+    background: rgb(48,64,77);
+    
+}
+
+.filter {
+    
+    
+}
+/*DISPLAY*/
+
+
+
+/*padrao de lado*/
 .container{
     margin: 0 auto;
     display: flex;
 }
 
+.row {
+	flex-direction: row;
+}
+
 .item {
 	flex: 1;
-    text-align: center;
+    text-align: center;   
 }

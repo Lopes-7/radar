@@ -35,6 +35,7 @@ export class FilterTable extends Component {
         //determinando quais linhas de filtros devem ser mostradas
         const visibleFilterRows = [];
         filterRows.map((filter)=>{
+            //verifica se propertiesSearchValue é substring de filter.name
             if(filter.name.indexOf(propertiesSearchValue.trim()) === -1){
                 return
             }
@@ -47,7 +48,7 @@ export class FilterTable extends Component {
             <div>
                <InputGroup 
                      
-                    className="FilterTableSearch"
+                    className="properties"
                     leftIcon={IconNames.FILTER}
                     placeholder="Find properties..."
                     large="true"

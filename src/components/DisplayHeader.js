@@ -10,22 +10,21 @@ export class DisplayHeader extends Component {
 
     render() { 
         const {changeAlertsSearch, alertsSearchValue} = this.props;
-        console.log(alertsSearchValue);
+        
         return ( 
-            <div className="DisplayHeader">
-                <div className="SearchInput">
+            <div >
+                <div>
                     <InputGroup 
                         className="bp3-round"
                         leftIcon="search"
                         placeholder="Search for Alerts"
-                        onChange={(e)=>{changeAlertsSearch(e.target.value)}}
-                    ></InputGroup>
-                    
+                        onChange={(e)=>{changeAlertsSearch(e.target.value)}}>
+                    </InputGroup>
                 </div>
                 
                 
-                <div className="ButtonGroup">
-                    <ButtonGroup >
+                <div>
+                    <ButtonGroup>
                         <Button icon="list" minimal={true}>List</Button>
                         <Button icon="grid-view" minimal={true}>Group By Trader</Button>
                         <Button minimal={true} disabled={true}>Take Action</Button>    
