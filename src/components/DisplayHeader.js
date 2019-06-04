@@ -7,12 +7,11 @@ import { Button, ButtonGroup, InputGroup } from "@blueprintjs/core";
 import {changeAlertsSearch} from '../actions/actionCreators';
 
 export class DisplayHeader extends Component {
-
     render() { 
         const {changeAlertsSearch, alertsSearchValue} = this.props;
         
         return ( 
-            <div >
+            <div>
                 <div>
                     <InputGroup 
                         className="bp3-round"
@@ -21,8 +20,6 @@ export class DisplayHeader extends Component {
                         onChange={(e)=>{changeAlertsSearch(e.target.value)}}>
                     </InputGroup>
                 </div>
-                
-                
                 <div>
                     <ButtonGroup>
                         <Button icon="list" minimal={true}>List</Button>
@@ -43,4 +40,4 @@ const mapStateToProps = store => ({
 const mapDispatchToProps = dispatch =>
     bindActionCreators({ changeAlertsSearch }, dispatch);
 
-export default connect(mapStateToProps,mapDispatchToProps)(DisplayHeader); 
+export default connect(mapStateToProps,mapDispatchToProps)(DisplayHeader);

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Icon } from "@blueprintjs/core";
 import { IconNames } from '@blueprintjs/icons';
 
-import Filter  from './Filter';
+import Filter from './Filter';
 
 //Componente que contém os filtros que podem ser aplicados. Agrupamento de filtros
 export class FilterRow extends Component {
@@ -19,15 +19,15 @@ export class FilterRow extends Component {
             })
         }
         
-        
-        return ( <div>
-            <div className="filter-row">
-                <p className="title">{this.props.name}</p>
-                <Icon className="filter-row-icon"
-                      onClick={() => {this.setState({hidden: !this.state.hidden})}} 
-                      icon={this.state.hidden ? IconNames.CHEVRON_RIGHT : IconNames.CHEVRON_DOWN } />
-            </div>
-            {!this.state.hidden && <div className="filter-expand">{visibleFilters}</div>}
+        return ( 
+            <div>
+                <div className="filter-row">
+                    <p className="title">{this.props.name}</p>
+                    <Icon className="filter-row-icon"
+                        onClick={() => {this.setState({hidden: !this.state.hidden})}} 
+                        icon={this.state.hidden ? IconNames.CHEVRON_RIGHT : IconNames.CHEVRON_DOWN } />
+                </div>
+                {!this.state.hidden && <div className="filter-expand">{visibleFilters}</div>}
             </div>
         );
     }

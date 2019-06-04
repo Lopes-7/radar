@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import  DisplayColumns  from './DisplayColumns';
+import DisplayColumns  from './DisplayColumns';
 import { Trade } from './Trade';
 import data from './Data.json';
 
 export class DisplayTable extends Component {
-
     render() { 
         const selectedRows = [];
         
@@ -17,7 +16,6 @@ export class DisplayTable extends Component {
                alertsSearchValue,
                displayBy} = this.props;
         
-        console.log("displayTable: " + displayBy);
         data.map(row => {
             //passando dados pelo filtro de substring
             if(row.title.indexOf(alertsSearchValue.trim()) !== -1){
@@ -45,7 +43,6 @@ export class DisplayTable extends Component {
             }
         })
         //organizando dados de acordo com displayBy
-        console.log("iniciando sort: " + displayBy)
         switch(displayBy){
             case 'title':
                 selectedRows.sort((a,b)=>{return a.title.localeCompare(b.title)})
@@ -69,6 +66,7 @@ export class DisplayTable extends Component {
                 selectedRows.sort((a,b)=>{return a.source.localeCompare(b.source)})
                 break
         }
+
         return (
             <div>
                 <DisplayColumns />
@@ -97,4 +95,4 @@ const mapStateToProps = store => ({
     displayBy: store.displayState.displayBy
 })
 
-export default connect(mapStateToProps)(DisplayTable); 
+export default connect(mapStateToProps)(DisplayTable);

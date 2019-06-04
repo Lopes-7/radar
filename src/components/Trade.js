@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 export class Trade extends Component {
     render() { 
         return ( 
-
             <div className="caber">
                 <div>{this.props.title}</div>
                 <div>{this.props.color}</div>
@@ -12,7 +11,6 @@ export class Trade extends Component {
                 <div>{this.props.counterparty}</div>
                 <div>{this.props.book}</div>
                 <div>{this.props.source}</div>
-
             </div>
         );
     }

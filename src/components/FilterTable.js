@@ -5,30 +5,12 @@ import { connect } from "react-redux";
 import { InputGroup } from "@blueprintjs/core";
 import { IconNames } from "@blueprintjs/icons";
 
-import {changePropertiesSearch} from '../actions/actionCreators';
-import {FilterRow} from './FilterRow';
+import { changePropertiesSearch } from '../actions/actionCreators';
+import { FilterRow } from './FilterRow';
 
-//Componente que contem os agrupamento de filtros
+//Componente que contem os agrupamentos de filtros
 export class FilterTable extends Component {
-        
     render() { 
-        const filterRows = [{name: 'Status',
-                                 content: ['Open', 'Closed', 'Escalated']},
-                                {name: 'Time',
-                                 content: null},
-                                {name: 'Assignee', 
-                                 content: null},
-                                {name: 'Watcher',
-                                 content: null},
-                                {name: 'Counterparty',
-                                 content: null},
-                                {name: 'Severity',
-                                 content: null},
-                                {name: 'Source',
-                                content: null},
-                                {name: 'Trader',
-                                content: null}];
-        
         //pegando o estado da store
         const {changePropertiesSearch, propertiesSearchValue} = this.props;
         
@@ -43,11 +25,11 @@ export class FilterTable extends Component {
                 
                 <FilterRow name={filter.name} key={filter.name} content={filter.content}></FilterRow>
             ) 
-        })
+        });
+
         return (
             <div>
                <InputGroup 
-                     
                     className="properties"
                     leftIcon={IconNames.FILTER}
                     placeholder="Find properties..."
@@ -57,11 +39,29 @@ export class FilterTable extends Component {
                         })} 
                 />
                 {visibleFilterRows}
-
             </div>
         );
     }
 }
+
+
+const filterRows = [{name: 'Status',
+                    content: ['Open', 'Closed', 'Escalated']},
+                    {name: 'Time',
+                    content: null},
+                    {name: 'Assignee', 
+                    content: null},
+                    {name: 'Watcher',
+                    content: null},
+                    {name: 'Counterparty',
+                    content: null},
+                    {name: 'Severity',
+                    content: null},
+                    {name: 'Source',
+                    content: null},
+                    {name: 'Trader',
+                    content: null}];
+        
 
 const mapStateToProps = store => ({
     propertiesSearchValue: store.propertieSearchState.propertiesSearchValue 
@@ -70,4 +70,4 @@ const mapStateToProps = store => ({
 const mapDispatchToProps = dispatch =>
     bindActionCreators({ changePropertiesSearch }, dispatch);
 
-export default connect(mapStateToProps,mapDispatchToProps)(FilterTable); 
+export default connect(mapStateToProps,mapDispatchToProps)(FilterTable);

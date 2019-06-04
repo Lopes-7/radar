@@ -4,8 +4,7 @@ import { connect } from 'react-redux';
 
 import { changeDisplay} from '../actions/actionCreators';
 
-class DisplayColumns extends Component {
-    
+class DisplayColumns extends Component {    
     render() { 
         const {displayBy, changeDisplay} = this.props
     
@@ -33,7 +32,8 @@ class DisplayColumns extends Component {
 const mapStateToProps = store =>({
     displayBy: store.displayState.displayBy
 });
+
 const mapDispatchToProps = dispatch =>
     bindActionCreators({ changeDisplay }, dispatch);
 
-export default connect(mapStateToProps, mapDispatchToProps)(DisplayColumns); 
+export default connect(mapStateToProps, mapDispatchToProps)(DisplayColumns);

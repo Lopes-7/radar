@@ -4,12 +4,13 @@ import {connect} from "react-redux";
  
 import { Button } from "@blueprintjs/core";
 import { IconNames } from "@blueprintjs/icons";
+
 import { changeFilter } from '../actions/actionCreators';
 
 export class Filter extends Component {
     render() { 
         //pegando o estado da store
-        const { changeFilter, openFilter, closedFilter, escalatedFilter } = this.props   
+        const {changeFilter, openFilter, closedFilter, escalatedFilter} = this.props   
         //definindo qual filtro é este e utilizando o estado corrreto
         var validFilter
         switch (this.props.name){
@@ -37,15 +38,14 @@ export class Filter extends Component {
         );
     }
 }
+
 const mapStateToProps = store => ({ 
     openFilter: store.filtersState.openFilter,
     closedFilter: store.filtersState.closedFilter,
     escalatedFilter: store.filtersState.escalatedFilter
 })
 
-
 const mapDispatchToProps = dispatch =>
     bindActionCreators({ changeFilter }, dispatch);
 
-export default connect(mapStateToProps, mapDispatchToProps)(Filter); 
-
+export default connect(mapStateToProps, mapDispatchToProps)(Filter);
