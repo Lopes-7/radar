@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
+import DisplayColumns from './DisplayColumns';
 import { Trade } from './Trade';
 import data from './Data.json';
 
 export class DisplayTable extends Component {
 
-
     render() { 
         const selectedRows = [];
         
         //pegando estado da store, se o filtro x está ativado a constante x é verdadeira
-        const {openFilter, closedFilter, escalatedFilter, alertsSearchValue} = this.props;
+        const {openFilter,
+               closedFilter, 
+               escalatedFilter, 
+               alertsSearchValue,
+               displayBy} = this.props;
         
+        console.log("displayTable: " + displayBy);
         data.map(row => {
             //passando dados pelo filtro de substring
             if(row.title.indexOf(alertsSearchValue.trim()) !== -1){
@@ -43,6 +48,7 @@ export class DisplayTable extends Component {
             
         return (
             <div>
+                <DisplayColumns />
                 <ul>
                     {selectedRows.map(row => {
                         return <Trade key={row.title}
@@ -64,7 +70,8 @@ const mapStateToProps = store => ({
     openFilter: store.filtersState.openFilter,
     closedFilter: store.filtersState.closedFilter,
     escalatedFilter: store.filtersState.escalatedFilter,
-    alertsSearchValue: store.alertsSearchState.alertsSearchValue
+    alertsSearchValue: store.alertsSearchState.alertsSearchValue,
+    displayBy: store.displayState.displayBy
 })
 
 export default connect(mapStateToProps)(DisplayTable); 

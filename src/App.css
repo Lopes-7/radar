@@ -69,7 +69,9 @@
     
 }
 /*DISPLAY*/
-
+.caber{
+    display: flex;
+}
 
 
 /*padrao de lado*/
