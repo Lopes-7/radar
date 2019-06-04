@@ -9,7 +9,7 @@ import {ALERTS_SEARCH_UPDATE_VALUE,
 export const changeAlertsSearch = value => ({
   type: ALERTS_SEARCH_UPDATE_VALUE,
   alertsSearchValue: value //string recebida
-})
+});
 
 //action creator para o pressionamento de uma das colunas do Display
 export const changeDisplay = value => ({

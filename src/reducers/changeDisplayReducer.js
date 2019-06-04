@@ -2,7 +2,7 @@ import {CHANGE_DISPLAY} from '../actions/actionTypes';
 
 //estado inicial os tres filtros desativados
 const initialState = {
-  displayBy: 'title'
+  displayBy: 'status'
 };
 
 export const changeDisplayReducer = (state = initialState, action) => {
@@ -11,7 +11,7 @@ export const changeDisplayReducer = (state = initialState, action) => {
       return {
         ...state,
         displayBy: action.displayBy
-        }
+        };
     default:
       return state;
   }

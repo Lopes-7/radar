@@ -73,7 +73,6 @@
     display: flex;
 }
 
-
 /*padrao de lado*/
 .container{
     margin: 0 auto;
@@ -86,5 +85,5 @@
 
 .item {
 	flex: 1;
-    text-align: center;   
+       
 }

@@ -2,25 +2,29 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import { changeDisplay } from '../actions/actionCreators';
+import { changeDisplay} from '../actions/actionCreators';
 
-export class DisplayColumns extends Component {
+class DisplayColumns extends Component {
     
     render() { 
-        const {displayBy} = this.props
-        console.log("das colunas"+displayBy)
+        const {displayBy, changeDisplay} = this.props
+    
         return (
-            <div className="caber">
-                <div onClick={()=>{
-                    changeDisplay("title")}}>Title</div>
-
-                <div onClick={()=>{
-                    changeDisplay("color");}}>Color</div>
-                <div onClick={()=>{changeDisplay('status');}}>Status</div>
-                <div onClick={()=>{changeDisplay('trader')}}>Trader</div>
-                <div onClick={()=>{changeDisplay('counterparty')}}>Counterparty</div>
-                <div onClick={()=>{changeDisplay('book')}}>Book</div>
-                <div onClick={()=>{changeDisplay('source')}}>Source</div>
+            <div className="container flex">
+                <div className="item flex-item-1"
+                onClick={()=>{changeDisplay('title')}}>TITLE</div>
+                <div className="item"
+                onClick={()=>{changeDisplay('color');}}>Color</div>
+                <div className="item flex-item-1"
+                onClick={()=>{changeDisplay('status');}}>STATUS</div>
+                <div className="item flex-item-1"
+                onClick={()=>{changeDisplay('trader')}}>TRADER</div>
+                <div className="item flex-item-1"
+                onClick={()=>{changeDisplay('counterparty')}}>COUNTERPARTY</div>
+                <div className="item flex-item-1"
+                onClick={()=>{changeDisplay('book')}}>BOOK</div>
+                <div className="item flex-item-1"
+                onClick={()=>{changeDisplay('source')}}>SOURCE</div>
             </div>
         );
     }
@@ -28,7 +32,7 @@ export class DisplayColumns extends Component {
 
 const mapStateToProps = store =>({
     displayBy: store.displayState.displayBy
-})
+});
 const mapDispatchToProps = dispatch =>
     bindActionCreators({ changeDisplay }, dispatch);
 
