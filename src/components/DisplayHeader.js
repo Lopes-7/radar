@@ -18,10 +18,10 @@ export class DisplayHeader extends Component {
                         placeholder="Search for Alerts"
                         onChange={(e)=>{changeAlertsSearch(e.target.value)}}>
                     </InputGroup>
-                    <ButtonGroup className="last-button">
+                    <ButtonGroup className="buttons">
                         <Button icon="list" minimal={true}>List</Button>
                         <Button icon="grid-view" minimal={true}>Group By Trader</Button>
-                        <Button className="button-action" minimal={true} disabled={true}>Take Action</Button>    
+                        <Button className="button-action"  disabled={true}>Take Action</Button>    
                     </ButtonGroup>
             </div>
         );

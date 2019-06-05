@@ -70,7 +70,6 @@ export class DisplayTable extends Component {
         return (
             <div>
                 <DisplayColumns />
-                <ul>
                     {selectedRows.map(row => {
                         return <Trade key={row.title}
                                       title={row.title}
@@ -81,7 +80,6 @@ export class DisplayTable extends Component {
                                       book={row.book}
                                       source={row.source} />
                     })}
-                </ul>
             </div>
         );
     }

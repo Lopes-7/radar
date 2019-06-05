@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export class Trade extends Component {
     render() { 
         return ( 
-            <div className="caber">
+            <div className="trade">
                 <div>{this.props.title}</div>
                 <div>{this.props.color}</div>
                 <div>{this.props.status}</div>

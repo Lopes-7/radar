@@ -8,8 +8,6 @@
     background: rgb(48,64,77);
     color: white;
     min-height:100vh;  
-    
-    
 }
 
 /*Sidebar Header*/
@@ -19,8 +17,28 @@
     color: white;
 }
 
-.bp3-navbar.radar .bp3-navbar-group.bp3-align-left .icons {
+.bp3-navbar.radar .bp3-navbar-group.bp3-align-left{
+    margin-left: 5px;
+}
+
+/*Radar title*/
+.bp3-navbar.radar .bp3-navbar-group.bp3-align-left .bp3-navbar-heading.radar-title{
+    margin-left: 15px;
+    font-size: 17px;
+}
+/*icons*/
+.bp3-navbar.radar .bp3-navbar-group.bp3-align-left .icons{
     color: rgb(136,154,166);
+    margin-left: 15px;   
+}
+.bp3-navbar.radar .bp3-navbar-group.bp3-align-left .icons .icon-user{
+    margin-left: 10px;
+}
+.bp3-navbar.radar .bp3-navbar-group.bp3-align-left .icons .icon-notif{
+    margin-left: 10px;
+}
+.bp3-navbar.radar .bp3-navbar-group.bp3-align-left .icons .icon-help {
+    margin-left: 10px;
 }
 
 /*Open Flags Header*/
@@ -49,7 +67,7 @@
     background: rgb(57,75,89);
     height: 40px;
     border: 1px;
-    border-style: solid; 
+    border-bottom: solid; 
     border-color: rgb(48,64,77);   
     padding-top: 11px;
     padding-left: 10px;
@@ -59,6 +77,7 @@
     margin-left: auto;
     color:rgb(135,153,166);
 }
+
 .filter-row-title {
     float: left;
     
@@ -73,16 +92,19 @@
     display: flex;    
     
 }
+
 .filter .bp3-button.bp3-small.filter-button {
     color: rgb(135,153,166);
     background: rgb(57,75,89);
 }
+
 /*DISPLAY*/
 .display{
+    background:rgb(236,241,245);
     min-width: 100vh;
     display: flex;
     flex-direction: column;
-    padding-left: 10px;
+    
     padding-top: 2px;
     padding-bottom: 2px;
     
@@ -90,24 +112,67 @@
 .display-header{
     display: flex;
     flex-direction: row;
+    padding-left: 10px;
+    padding-top: 7px;
+    padding-bottom: 11px;/*!!!*/
+
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: rgb(135,153,166);
 }
 
+/*Search for alerts input and buttons*/
 .bp3-input-group.bp3-round.ipg {
-    
+    background: black
+
 }
 .bp3-input-group.bp3-round .bp3-input{
     
 }
+.bp3-button-group.buttons {
+    padding-left: 20px
+}
 
-
-.bp3-button-group.last-button .bp3-button.bp3-disabled.bp3-minimal.button-action {
-    margin-left: auto;
+.bp3-button-group.buttons .bp3-button.bp3-disabled.button-action {
     color: red;
+    
 }
-.caber{
+/*TableColumns*/
+.columns{
     display: flex;
+    flex-direction: row;
+    background: white;
+    width:750px;
+    height:50px;
+    padding-left: 15px;
+    padding-top: 15px;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: rgb(135,153,166);
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(57,75,89)
 }
+.trade{
+    display:flex;
+    height:80px;
+    padding-left: 15px;
+    padding-top: 30px;
+    background: white;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: rgb(135,153,166);
+    color: rgb(57,75,89)
+}
+.title{
 
+}
+.status{
+
+}
+.trader{
+
+}
 /*padrao de lado*/
 .container{
     margin: 0 auto;

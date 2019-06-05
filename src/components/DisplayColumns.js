@@ -9,7 +9,7 @@ class DisplayColumns extends Component {
         const {displayBy, changeDisplay} = this.props
     
         return (
-            <div className="container flex">
+            <div className="columns">
                 <div className="item flex-item-1"
                 onClick={()=>{changeDisplay('title')}}>TITLE</div>
                 <div className="item"

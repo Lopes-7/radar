@@ -10,11 +10,11 @@ export class SidebarHeader extends Component{
                 <Navbar className="radar">
                     <NavbarGroup>
                         <Icon  icon={IconNames.CIRCLE} />
-                        <NavbarHeading>RADAR</NavbarHeading>
+                        <NavbarHeading className="radar-title">RADAR</NavbarHeading>
                         <div className="icons">
-                            <Icon icon={IconNames.USER} />
-                            <Icon icon={IconNames.NOTIFICATIONS} />
-                            <Icon icon={IconNames.HELP} />
+                            <Icon className="icon-user" icon={IconNames.USER} />
+                            <Icon className="icon-notif" icon={IconNames.NOTIFICATIONS} />
+                            <Icon className="icon-help" icon={IconNames.HELP} />
                         </div>     
                     </NavbarGroup>
                 </Navbar> 
