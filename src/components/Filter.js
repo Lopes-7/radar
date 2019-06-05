@@ -27,7 +27,8 @@ export class Filter extends Component {
         
         return (
             <div className="filter">
-            <Button icon={IconNames.SMALL_CROSS}
+            <Button className={!validFilter ? "filter-button" : ""}
+                    icon={IconNames.SMALL_CROSS}
                     small={true}
                     intent={validFilter ? "success" : "none"}
                     onClick={()=>{changeFilter(this.props.name)}}> 

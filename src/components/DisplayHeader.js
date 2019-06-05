@@ -11,23 +11,18 @@ export class DisplayHeader extends Component {
         const {changeAlertsSearch, alertsSearchValue} = this.props;
         
         return ( 
-            <div>
-                <div>
-                    <InputGroup 
+            <div className="display-header">
+                    <InputGroup className="ipg"
                         className="bp3-round"
                         leftIcon="search"
                         placeholder="Search for Alerts"
                         onChange={(e)=>{changeAlertsSearch(e.target.value)}}>
                     </InputGroup>
-                </div>
-                <div>
-                    <ButtonGroup>
+                    <ButtonGroup className="last-button">
                         <Button icon="list" minimal={true}>List</Button>
                         <Button icon="grid-view" minimal={true}>Group By Trader</Button>
-                        <Button minimal={true} disabled={true}>Take Action</Button>    
+                        <Button className="button-action" minimal={true} disabled={true}>Take Action</Button>    
                     </ButtonGroup>
-                    
-                </div>
             </div>
         );
     }

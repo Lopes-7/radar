@@ -21,10 +21,11 @@ export class FilterRow extends Component {
         
         return ( 
             <div>
-                <div className="filter-row">
-                    <p className="title">{this.props.name}</p>
+                <div className="filter-row"
+                onClick={() => {this.setState({hidden: !this.state.hidden})}}>
+                    <p className="filter-row-title">{this.props.name}</p>
                     <Icon className="filter-row-icon"
-                        onClick={() => {this.setState({hidden: !this.state.hidden})}} 
+                         
                         icon={this.state.hidden ? IconNames.CHEVRON_RIGHT : IconNames.CHEVRON_DOWN } />
                 </div>
                 {!this.state.hidden && <div className="filter-expand">{visibleFilters}</div>}
