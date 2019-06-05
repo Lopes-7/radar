@@ -15,10 +15,13 @@ class DisplayColumns extends Component {
             <div className="columns">
                 <div className="title-column"
                      onClick={()=>{changeDisplay('title')}}>TITLE</div>
-                <div className="color-column">
+                <div className="color-column"
+                     onClick={()=>{changeDisplay('color');}}>
                     <Icon icon={IconNames.ERROR}
-                        className="icon-info"
-                        onClick={()=>{changeDisplay('color');}} />
+                          intent="primary"
+                          className="icon-info" />
+                    <Icon icon={IconNames.CARET_DOWN} 
+                          intent="primary" />
                 </div>
                 <div className="status-column"
                 onClick={()=>{changeDisplay('status');}}>STATUS</div>

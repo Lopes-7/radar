@@ -22,11 +22,11 @@ export class FilterTable extends Component {
                 return
             }
             visibleFilterRows.push(
-                
                 <FilterRow name={filter.name} key={filter.name} content={filter.content}></FilterRow>
             ) 
         });
 
+        //renderiza o input e os filtros selecionados
         return (
             <div>
                <InputGroup 
@@ -44,7 +44,7 @@ export class FilterTable extends Component {
     }
 }
 
-
+//Agrupamentos de filtros e seus respectivos filtros
 const filterRows = [{name: 'Status',
                     content: ['Open', 'Closed', 'Escalated']},
                     {name: 'Time',

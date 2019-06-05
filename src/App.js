@@ -8,10 +8,11 @@ import "@blueprintjs/icons/lib/css/blueprint-icons.css";
 import { Display } from './components/Display';
 import { Sidebar } from './components/Sidebar';
 
+//Componente principal constituído de dois componentes menores
 class App extends Component {
     render() {
         return (
-            <div className="container row">
+            <div className="App">
                 <Sidebar className="item"/>
                 <Display className="item"/>
           </div>

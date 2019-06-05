@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import { Tag } from "@blueprintjs/core";
-
 export class Trade extends Component {
     render() { 
         return ( 
