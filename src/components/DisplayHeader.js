@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from "react-redux";
 
-import { Button, ButtonGroup, InputGroup, Tag } from "@blueprintjs/core";
+import { Button, ButtonGroup, Divider, Icon, InputGroup, Tag } from "@blueprintjs/core";
+import { IconNames } from "@blueprintjs/icons";
 
 import {changeAlertsSearch} from '../actions/actionCreators';
 
@@ -22,6 +23,8 @@ export class DisplayHeader extends Component {
                     <ButtonGroup className="buttons">
                         <Button icon="list" minimal={true} active={true} intent="primary" >List</Button>
                         <Button className="button-trader" icon="grid-view" minimal={true}>Group By Trader</Button>
+                        <Divider className="divider"></Divider>
+                        <Icon className="icon-down" icon={IconNames.CARET_DOWN}></Icon>
                         <Button className="button-action" disabled={true}>Take Action</Button>    
                     </ButtonGroup>
             </div>
