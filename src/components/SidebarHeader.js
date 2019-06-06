@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import { Icon, Navbar, NavbarGroup, NavbarHeading } from "@blueprintjs/core";
-import { IconNames } from "@blueprintjs/icons";
+import { Icon, Navbar, NavbarGroup, NavbarHeading } from '@blueprintjs/core';
+import { IconNames } from '@blueprintjs/icons';
 
 export class SidebarHeader extends Component{
     render() { 

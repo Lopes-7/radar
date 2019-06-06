@@ -1,8 +1,8 @@
 import {CHANGE_DISPLAY} from '../actions/actionTypes';
 
-//estado inicial os tres filtros desativados
+//estado inicial: mostrar dados organizados pelo titulo
 const initialState = {
-  displayBy: 'status'
+  displayBy: 'title'
 };
 
 export const changeDisplayReducer = (state = initialState, action) => {

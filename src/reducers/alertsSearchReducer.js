@@ -1,6 +1,6 @@
 import {ALERTS_SEARCH_UPDATE_VALUE} from '../actions/actionTypes';
 
-//estado inicial 
+//estado inicial: a string de busca é vazia 
 const initialState = {
   alertsSearchValue: ''
 };

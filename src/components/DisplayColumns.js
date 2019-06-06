@@ -5,10 +5,11 @@ import { connect } from 'react-redux';
 import { Icon } from '@blueprintjs/core';
 import { IconNames } from '@blueprintjs/icons';
 
-import { changeDisplay} from '../actions/actionCreators';
+import { changeDisplay } from '../actions/actionCreators';
 
 class DisplayColumns extends Component {    
     render() { 
+        //pegando estado da store
         const {changeDisplay} = this.props
     
         return (

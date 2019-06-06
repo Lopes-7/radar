@@ -1,6 +1,6 @@
 import {CHANGE_FILTER} from '../actions/actionTypes';
 
-//estado inicial os tres filtros desativados
+//estado inicial: nenhum filtro ativado
 const initialState = {
   activeFilters: []
 };
@@ -9,8 +9,7 @@ export const changeFilterReducer = (state = initialState, action) => {
   switch (action.type) {
     case CHANGE_FILTER:
       //verificando se o filtro encontra-se na lista de ativos
-      const foundIndex = state.activeFilters.indexOf(action.filterName);
-      if (foundIndex === -1){
+      if (state.activeFilters.indexOf(action.filterName) === -1){
         //se o filtro nao esta na lista é adicionado
         return {
           ...state,

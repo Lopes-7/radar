@@ -8,7 +8,7 @@ import Filter from './Filter';
 //Componente que contém os filtros que podem ser aplicados. Agrupamento de filtros
 export class FilterRow extends Component {
     state = {
-        hidden: true
+        expanded: false
     }
     render() { 
         //recebe a lista de filtros que este agrupamento contém
@@ -17,7 +17,7 @@ export class FilterRow extends Component {
         
         //se este agrupamento contem filtros e o estado interno diz que estes
         //filtros devem ser mostrados
-        if (filters !== null && this.state.hidden === false){
+        if (filters !== null && this.state.expanded === true){
             filters.map((filter)=>{
                 visibleFilters.push(<Filter name={filter} key={filter} />)
             })
@@ -28,12 +28,12 @@ export class FilterRow extends Component {
         return ( 
             <div>
                 <div className="filter-row"
-                     onClick={() => {this.setState({hidden: !this.state.hidden})}}>
+                     onClick={() => {this.setState({expanded: !this.state.expanded})}}>
                     <p className="filter-row-title">{this.props.name}</p>
                     <Icon className="filter-row-icon"                     
-                        icon={this.state.hidden ? IconNames.CHEVRON_RIGHT : IconNames.CHEVRON_DOWN } />
+                        icon={this.state.expanded ? IconNames.CHEVRON_DOWN : IconNames.CHEVRON_RIGHT}/>
                 </div>
-                {!this.state.hidden && <div className="filter-expand">{visibleFilters}</div>}
+                {this.state.expanded && <div className="filter-expand">{visibleFilters}</div>}
             </div>
         );
     }

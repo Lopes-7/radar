@@ -9,14 +9,14 @@ export class DisplayTable extends Component {
     render() { 
         const selectedRows = [];
         
-        //pegando estado da store, se o filtro x está ativado a constante x é verdadeira
+        //pegando estado da store
         const {activeFilters, 
                alertsSearchValue,
                displayBy} = this.props;
         
         data.map(row => {
             //passando dados pelo filtro de substring
-            if(row.title.indexOf(alertsSearchValue.trim()) !== -1){
+            if(row.title.toLowerCase().indexOf(alertsSearchValue.trim().toLowerCase()) !== -1){
                 //se os dados passaram pelo 1° filtro são testados pelos filtros de botão
                 //se nao houver filtros ativos todos os dados sao selecionados
                 if(activeFilters.length === 0){

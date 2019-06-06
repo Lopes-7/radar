@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
-import { connect } from "react-redux";
+import { connect } from 'react-redux';
 
-import { InputGroup } from "@blueprintjs/core";
-import { IconNames } from "@blueprintjs/icons";
+import { InputGroup } from '@blueprintjs/core';
+import { IconNames } from '@blueprintjs/icons';
 
 import { changePropertiesSearch } from '../actions/actionCreators';
 import { FilterRow } from './FilterRow';
@@ -18,7 +18,7 @@ export class FilterTable extends Component {
         const visibleFilterRows = [];
         filterRows.map((filter)=>{
             //verifica se propertiesSearchValue é substring de filter.name
-            if(filter.name.indexOf(propertiesSearchValue.trim()) === -1){
+            if(filter.name.toLowerCase().indexOf(propertiesSearchValue.trim().toLowerCase()) === -1){
                 return
             }
             visibleFilterRows.push(

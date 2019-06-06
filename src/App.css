@@ -77,8 +77,9 @@
     border: 1px;
     border-bottom: solid; 
     border-color: rgb(48,64,77);
+    cursor: pointer;
     display: flex;
-    flex-direction: row; /*!!!*/
+    flex-direction: row;
     height: 40px;
     padding-left: 10px;
     padding-top: 11px;
@@ -132,9 +133,6 @@
 }
 
 /*Search for alerts input and buttons*/
-.bp3-input-group.bp3-round.ipg {
-}
-
 .bp3-input-group.bp3-round .bp3-input{
     width: 300px;
 }
@@ -197,6 +195,7 @@
 }
 
 .title-column{
+    cursor: pointer;
     flex: 1;
     margin-right: 20px;
     max-width: 280px;
@@ -208,6 +207,7 @@
 }
 
 .color-column{
+    cursor: pointer;
     margin-left: 5px;
     margin-right: 5px;
 }
@@ -232,6 +232,13 @@
     background: red;
 }
 
+.status-column{
+    cursor: pointer;
+    margin-left: 20px;
+    margin-right: 20px;
+    min-width: 2cm;
+}
+
 .status{
     border: solid;
     border-radius: 5px;
@@ -246,12 +253,8 @@
     text-align: center;
 }
 
-.status-column{
-    margin-left: 20px;
-    margin-right: 20px;
-    min-width: 2cm;
-}
-.trader-column{
+.trader-column {
+    cursor: pointer;
     margin-right: 20px;
     min-width: 150px;
 }
@@ -263,25 +266,30 @@
 }
 
 .counterparty-column {
+    cursor: pointer;
     margin-right: 20px;
     min-width: 140px;
 }
 
-.counterparty{
+.counterparty {
     color: rgb(136,154,166);
     margin-right: 20px;
     width:140px;
 }
 
-.book-column{
+.book-column {
+    cursor: pointer;
     margin-right: 20px;
     width: 70px;
 }
 
-.book{
+.book {
     color: rgb(136,154,166);
     margin-right: 20px;
     width: 70px;
+}
+.source-column {
+    cursor: pointer
 }
 .source {
     color: rgb(136,154,166);

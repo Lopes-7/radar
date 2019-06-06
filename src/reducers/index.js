@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 
 import { alertsSearchReducer } from './alertsSearchReducer';
-import { changeFilterReducer } from './changeFilterReducer';
 import { changeDisplayReducer } from './changeDisplayReducer';
+import { changeFilterReducer } from './changeFilterReducer';
 import { propertiesSearchReducer } from './propertiesSearchReducer';
 
 //combinando reducers

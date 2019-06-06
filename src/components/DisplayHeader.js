@@ -5,10 +5,11 @@ import { connect } from 'react-redux';
 import { Button, ButtonGroup, Divider, Icon, InputGroup, Tag } from '@blueprintjs/core';
 import { IconNames } from '@blueprintjs/icons';
 
-import {changeAlertsSearch} from '../actions/actionCreators';
+import { changeAlertsSearch } from '../actions/actionCreators';
 
 export class DisplayHeader extends Component {
     render() { 
+        //pegando estado da store
         const {changeAlertsSearch} = this.props;
          
         return ( 
@@ -34,7 +35,6 @@ export class DisplayHeader extends Component {
 
 const tag = <Tag minimal={true}>152</Tag>
 
-    
 const mapDispatchToProps = dispatch =>
     bindActionCreators({ changeAlertsSearch }, dispatch);
 

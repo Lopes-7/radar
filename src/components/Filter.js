@@ -12,7 +12,7 @@ export class Filter extends Component {
         //pegando o estado da store
         const {changeFilter, activeFilters} = this.props   
         
-        //definindo se este filtro esta ativado
+        //verificando se este filtro esta ativado
         var isActive = false;
         if (activeFilters.indexOf(this.props.name) !== -1){
             isActive = true;
