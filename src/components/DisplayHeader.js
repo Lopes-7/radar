@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
-import { connect } from "react-redux";
+import { connect } from 'react-redux';
 
-import { Button, ButtonGroup, Divider, Icon, InputGroup, Tag } from "@blueprintjs/core";
-import { IconNames } from "@blueprintjs/icons";
+import { Button, ButtonGroup, Divider, Icon, InputGroup, Tag } from '@blueprintjs/core';
+import { IconNames } from '@blueprintjs/icons';
 
 import {changeAlertsSearch} from '../actions/actionCreators';
 
 export class DisplayHeader extends Component {
     render() { 
-        const {changeAlertsSearch, alertsSearchValue} = this.props;
+        const {changeAlertsSearch} = this.props;
          
         return ( 
             <div className="display-header">
@@ -34,11 +34,8 @@ export class DisplayHeader extends Component {
 
 const tag = <Tag minimal={true}>152</Tag>
 
-const mapStateToProps = store => ({
-    alertsSearchValue: store.alertsSearchState.alertsSearchValue 
-})
     
 const mapDispatchToProps = dispatch =>
     bindActionCreators({ changeAlertsSearch }, dispatch);
 
-export default connect(mapStateToProps,mapDispatchToProps)(DisplayHeader);
+export default connect(null,mapDispatchToProps)(DisplayHeader);

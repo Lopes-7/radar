@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Icon } from "@blueprintjs/core";
+import { Icon } from '@blueprintjs/core';
 import { IconNames } from '@blueprintjs/icons';
 
 import Filter from './Filter';

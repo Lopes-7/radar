@@ -10,27 +10,20 @@ import { changeFilter } from '../actions/actionCreators';
 export class Filter extends Component {
     render() { 
         //pegando o estado da store
-        const {changeFilter, openFilter, closedFilter, escalatedFilter} = this.props   
-        //definindo qual filtro é este e utilizando o estado corrreto
-        var validFilter
-        switch (this.props.name){
-            case 'Open':
-                validFilter = openFilter;
-                break
-            case 'Closed':
-                validFilter = closedFilter;
-                break
-            case 'Escalated': 
-                validFilter = escalatedFilter;
-                break
-        }
+        const {changeFilter, activeFilters} = this.props   
+        
+        //definindo se este filtro esta ativado
+        var isActive = false;
+        if (activeFilters.indexOf(this.props.name) !== -1){
+            isActive = true;
+        } 
         
         return (
             <div className="filter">
-            <Button className={!validFilter ? "filter-button" : ""}
+            <Button className={!isActive ? "filter-button" : ""}
                     icon={IconNames.SMALL_CROSS}
                     small={true}
-                    intent={validFilter ? "success" : "none"}
+                    intent={isActive ? "success" : "none"}
                     onClick={()=>{changeFilter(this.props.name)}}> 
                     {this.props.name}                     
             </Button>
@@ -41,9 +34,7 @@ export class Filter extends Component {
 }
 
 const mapStateToProps = store => ({ 
-    openFilter: store.filtersState.openFilter,
-    closedFilter: store.filtersState.closedFilter,
-    escalatedFilter: store.filtersState.escalatedFilter
+    activeFilters: store.filtersState.activeFilters
 })
 
 const mapDispatchToProps = dispatch =>

@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import { Icon } from "@blueprintjs/core";
-import { IconNames } from "@blueprintjs/icons";
+import { Icon } from '@blueprintjs/core';
+import { IconNames } from '@blueprintjs/icons';
 
 import { changeDisplay} from '../actions/actionCreators';
 
 class DisplayColumns extends Component {    
     render() { 
-        const {displayBy, changeDisplay} = this.props
+        const {changeDisplay} = this.props
     
         return (
             <div className="columns">
@@ -38,11 +38,8 @@ class DisplayColumns extends Component {
     }
 }
 
-const mapStateToProps = store =>({
-    displayBy: store.displayState.displayBy
-});
 
 const mapDispatchToProps = dispatch =>
     bindActionCreators({ changeDisplay }, dispatch);
 
-export default connect(mapStateToProps, mapDispatchToProps)(DisplayColumns);
+export default connect(null, mapDispatchToProps)(DisplayColumns);

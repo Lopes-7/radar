@@ -10,39 +10,28 @@ export class DisplayTable extends Component {
         const selectedRows = [];
         
         //pegando estado da store, se o filtro x está ativado a constante x é verdadeira
-        const {openFilter,
-               closedFilter, 
-               escalatedFilter, 
+        const {activeFilters, 
                alertsSearchValue,
                displayBy} = this.props;
         
         data.map(row => {
             //passando dados pelo filtro de substring
             if(row.title.indexOf(alertsSearchValue.trim()) !== -1){
-                //se os dados passaram pelo primeiro filtro são testados pelos de botão
-                if (openFilter){
-                    if (row.status === 'Open'){
-                        selectedRows.push(row);
-                    }
+                //se os dados passaram pelo 1° filtro são testados pelos filtros de botão
+                //se nao houver filtros ativos todos os dados sao selecionados
+                if(activeFilters.length === 0){
+                    selectedRows.push(row)
                 }
-                if (closedFilter){
-                    if (row.status === 'Closed'){
-                        selectedRows.push(row);
-                    }
-                }
-                if (escalatedFilter){
-                    if (row.status === 'Escalated'){
-                        selectedRows.push(row);
-                    }
-                }
-                //se nenhum filtro de botão estiver ativado todos dados devem ser mostrados
-                if (!openFilter && !closedFilter && !escalatedFilter){
-                    selectedRows.push(row);
-                    
-                }
-            }
-        })
-        //organizando dados de acordo com displayBy
+                else{
+                    //para cada filtro ativo testa se os seleciona os dados devem ser selecionados 
+                    activeFilters.map((filter) => {
+                        if (row.status === filter){
+                            selectedRows.push(row)
+                        }
+                    })
+                }        
+        }});
+        //organizando dados de acordo com o estado displayBy
         switch(displayBy){
             case 'title':
                 selectedRows.sort((a,b)=>{return a.title.localeCompare(b.title)})
@@ -86,9 +75,7 @@ export class DisplayTable extends Component {
 }
 
 const mapStateToProps = store => ({ 
-    openFilter: store.filtersState.openFilter,
-    closedFilter: store.filtersState.closedFilter,
-    escalatedFilter: store.filtersState.escalatedFilter,
+    activeFilters: store.filtersState.activeFilters,
     alertsSearchValue: store.alertsSearchState.alertsSearchValue,
     displayBy: store.displayState.displayBy
 })

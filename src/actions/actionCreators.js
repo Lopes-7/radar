@@ -26,7 +26,7 @@ export const changePropertiesSearch = value => ({
 //action creator para o pressionamento dos botoes de filtro (open, closed, escalated)
 export const changeFilter = (value) => ({
   type: CHANGE_FILTER,
-  filterType: value //string que identifica o filtro
+  filterName: value //string que identifica o filtro
 });
 
 
