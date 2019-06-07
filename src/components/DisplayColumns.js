@@ -10,37 +10,46 @@ import { changeDisplay } from '../actions/actionCreators';
 class DisplayColumns extends Component {    
     render() { 
         //pegando estado da store
-        const {changeDisplay} = this.props
-    
+        const {changeDisplay, displayBy} = this.props
+        
+        //renderizando colunas, ao clicar em cada uma delas muda a forma como os dados
+        //são mostrados
         return (
             <div className="columns">
-                <div className="title-column"
-                     onClick={()=>{changeDisplay('title')}}>TITLE</div>
-                <div className="color-column"
+                <div className={(displayBy === 'title') ? "title-column-selected" : "title-column"}
+                     onClick={()=>{changeDisplay('title');}}>TITLE</div>
+
+                <div className={(displayBy === 'color') ? "color-column-selected" : "color-column"}
                      onClick={()=>{changeDisplay('color');}}>
                     <Icon icon={IconNames.ERROR}
-                          intent="primary"
                           className="icon-info" />
-                    <Icon icon={IconNames.CARET_DOWN} 
-                          intent="primary" />
+                    <Icon icon={IconNames.CARET_DOWN} />
                 </div>
-                <div className="status-column"
-                onClick={()=>{changeDisplay('status');}}>STATUS</div>
-                <div className="trader-column"
-                onClick={()=>{changeDisplay('trader')}}>TRADER</div>
-                <div className="counterparty-column"
-                onClick={()=>{changeDisplay('counterparty')}}>COUNTERPARTY</div>
-                <div className="book-column"
-                onClick={()=>{changeDisplay('book')}}>BOOK</div>
-                <div className="source-column"
-                onClick={()=>{changeDisplay('source')}}>SOURCE</div>
+
+                <div className={(displayBy === 'status') ? "status-column-selected" : "status-column"}
+                     onClick={()=>{changeDisplay('status');}}>STATUS</div>
+
+                <div className={(displayBy === 'trader') ? "trader-column-selected" : "trader-column"}
+                     onClick={()=>{changeDisplay('trader');}}>TRADER</div>
+
+                <div className={(displayBy === 'counterparty') ? "counterparty-column-selected" : "counterparty-column"}
+                     onClick={()=>{changeDisplay('counterparty');}}>COUNTERPARTY</div>
+
+                <div className={(displayBy === 'book') ? "book-column-selected" : "book-column"}
+                     onClick={()=>{changeDisplay('book');}}>BOOK</div>
+                     
+                <div className={(displayBy === 'source') ? "source-column-selected" : "source-column"}
+                     onClick={()=>{changeDisplay('source');}}>SOURCE</div>
             </div>
         );
     }
 }
 
+const mapStateToProps = store => ({
+    displayBy: store.displayState.displayBy
+})
 
 const mapDispatchToProps = dispatch =>
     bindActionCreators({ changeDisplay }, dispatch);
 
-export default connect(null, mapDispatchToProps)(DisplayColumns);
+export default connect(mapStateToProps, mapDispatchToProps)(DisplayColumns);
