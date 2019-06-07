@@ -12,22 +12,23 @@ export class Filter extends Component {
         //pegando o estado da store
         const {changeFilter, activeFilters} = this.props   
         
-        //verificando se este filtro esta ativado
+        //filtro inicialmente desativado
         var isActive = false;
+        //verfica se o nome deste filtro esta na lista de filtros ativados
         if (activeFilters.indexOf(this.props.name) !== -1){
             isActive = true;
         } 
         
+        //ao clicar no botao uma action é disparada para ativar ou desativar este filtro
         return (
             <div className="filter">
-            <Button className={!isActive ? "filter-button" : ""}
-                    icon={IconNames.SMALL_CROSS}
-                    small={true}
-                    intent={isActive ? "success" : "none"}
-                    onClick={()=>{changeFilter(this.props.name)}}> 
-                    {this.props.name}                     
-            </Button>
-            
+                <Button className={!isActive ? "filter-button" : ""}
+                        icon={IconNames.SMALL_CROSS}
+                        small={true}
+                        intent={isActive ? "success" : "none"}
+                        onClick={()=>{changeFilter(this.props.name)}}> 
+                        {this.props.name}                     
+                </Button>
             </div>
         );
     }

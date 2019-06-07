@@ -13,7 +13,7 @@ class DisplayColumns extends Component {
         const {changeDisplay, displayBy} = this.props
         
         //renderizando colunas, ao clicar em cada uma delas muda a forma como os dados
-        //são mostrados
+        //são mostrados e a coluna selecionada fica azul
         return (
             <div className="columns">
                 <div className={(displayBy === 'title') ? "title-column-selected" : "title-column"}
@@ -37,7 +37,7 @@ class DisplayColumns extends Component {
 
                 <div className={(displayBy === 'book') ? "book-column-selected" : "book-column"}
                      onClick={()=>{changeDisplay('book');}}>BOOK</div>
-                     
+
                 <div className={(displayBy === 'source') ? "source-column-selected" : "source-column"}
                      onClick={()=>{changeDisplay('source');}}>SOURCE</div>
             </div>
